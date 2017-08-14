@@ -1,0 +1,21 @@
+<form *ngIf="formData" (ngSubmit)="onSubmit()" [formGroup]="form">
+{{log(formData)}}
+  <div *ngFor="let input of formData">
+    <md-input-container floatPlaceholder="auto" class="input-{{input.alias}}">
+      <input mdInput type="{{input.controlType}}" formControlName="{{input.alias}}" placeholder="{{input.label}}">
+    </md-input-container>
+  </div>
+  <button>Submit</button>
+</form>
+<!--
+<md-radio-group *ngIf="input === 'radio'">
+  <label for="{{alias}}">{{placeholder}}</label>
+  <md-radio-button *ngFor="let radio of value"
+                    value="radio">{{radio}}
+  </md-radio-button>
+</md-radio-group>
+
+<div *ngIf="input === 'checkbox'">
+  <md-checkbox *ngFor="let checkbox of value">{{checkbox}}</md-checkbox>
+</div>
+-->

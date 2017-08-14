@@ -1,0 +1,21 @@
+{
+  "name": "angular2-material-dynamic-form",
+  "version": "0.0.1",
+  "description": "A simple dynamic form module using material design for angular 2",
+  "main": "form-material.module.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rip3rs/ng2-material-dynamic-form"
+  },
+  "keywords": [
+    "angular2",
+    "material",
+    "form",
+    "dynamic"
+  ],
+  "author": "“Joseph <“jbriggsr3@gmail.com”> (https://www.jbriggsr3.com)",
+  "license": "ISC"
+}
