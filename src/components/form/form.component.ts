@@ -1,14 +1,15 @@
 import { Component, OnInit, Input, Inject} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InputChooserService } from "../../services/input-chooser.service";
+import { InputInterface } from "../../models/input.interface";
 
 @Component({
-  selector: 'app-form',
+  selector: 'ng2-material-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
-  @Input() formData;
+export class DyFormComponent implements OnInit {
+  @Input() formData:InputInterface[];
 
   public form:FormGroup;
 
@@ -17,10 +18,11 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.inputGroup.buildFormGroup(this.formData)
+    console.log('this.form', this.form);
+
   }
 
-  log(log) {
-    console.log(log);
+  private getType(type:string):string {
+    return type ? type : 'input';
   }
-
 }

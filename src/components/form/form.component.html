@@ -1,0 +1,14 @@
+<form *ngIf="formData" (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div class="form-group" *ngFor="let param of formData">
+    <dy-checkbox *ngIf="getType(param.type) == 'checkbox'" [params]="param" [formGroup]="form"></dy-checkbox>
+    <!-- <dy-checkbox-list *ngIf="getType(param.type) == 'checkbox-list'" [params]="param" [formGroup]="form"></dy-checkbox-list> -->
+    <dy-date-picker *ngIf="getType(param.type) == 'date-picker'" [params]="param" [formGroup]="form"></dy-date-picker>
+    <dy-input *ngIf="getType(param.type) == 'input'" [params]="param" [formGroup]="form"></dy-input>
+    <dy-radio *ngIf="getType(param.type) == 'radio'" [params]="param" [formGroup]="form"></dy-radio>
+    <!-- <dy-radio-list *ngIf="getType(param.type) == 'radio-list'" [params]="param" [formGroup]="form"></dy-radio-list> -->
+    <dy-select *ngIf="getType(param.type) == 'select'" [params]="param" [formGroup]="form"></dy-select>
+    <dy-slide-toggle *ngIf="getType(param.type) == 'slide-toggle'" [params]="param" [formGroup]="form"></dy-slide-toggle>
+    <dy-slider *ngIf="getType(param.type) == 'slider'" [params]="param" [formGroup]="form"></dy-slider>
+  </div>
+  <button>Submit</button>
+</form>
