@@ -17,6 +17,7 @@
     "node_modules"
   ],
   "files": [
+    "index.ts",
     "./src/form-material.module.ts"
   ],
   "angularCompilerOptions": {

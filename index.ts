@@ -1,1 +1,1 @@
-export * from './dist/material-import.module';
+export * from './src/form-material.module';
