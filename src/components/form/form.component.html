@@ -1,4 +1,4 @@
-<form *ngIf="formData" (ngSubmit)="onSubmit()" [formGroup]="form">
+<form *ngIf="formData" (submit)="onSubmit(form.value)" [formGroup]="form">
   <div class="form-group" *ngFor="let param of formData">
     <dy-checkbox *ngIf="getType(param.type) == 'checkbox'" [params]="param" [formGroup]="form"></dy-checkbox>
     <!-- <dy-checkbox-list *ngIf="getType(param.type) == 'checkbox-list'" [params]="param" [formGroup]="form"></dy-checkbox-list> -->

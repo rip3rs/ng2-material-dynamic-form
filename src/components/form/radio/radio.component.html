@@ -1,8 +1,10 @@
-<md-radio-group class="radio" [formGroup]="formGroup">
-  <md-radio-button
-    class="radio-button"
-    *ngFor="let option of params.options"
-    [value]="option.value">
-      {{option.key}}
-  </md-radio-button>
-</md-radio-group>
+<div class="radio-group-container" [formGroup]="formGroup">
+  <md-radio-group class="radio"  formControlName="{{params.attr}}">
+    <md-radio-button
+      class="radio-button"
+      *ngFor="let option of params.options"
+      [value]="option.key">
+        {{option.value}}
+    </md-radio-button>
+  </md-radio-group>
+</div>

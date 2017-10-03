@@ -1,5 +1,7 @@
-<md-select placeholder="{{params.label}}" [formGroup]="formGroup">
-  <md-option *ngFor="let option of params.options" [value]="option.value">
-    {{option.key}}
-  </md-option>
-</md-select>
+<div class="select-container" [formGroup]="formGroup">
+  <md-select placeholder="{{params.alias}}" formControlName="{{params.attr}}">
+    <md-option *ngFor="let option of params.options" [value]="option.value">
+      {{option.key}}
+    </md-option>
+  </md-select>
+</div>

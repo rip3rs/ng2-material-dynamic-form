@@ -1,6 +1,11 @@
-<md-slide-toggle
-    class="slide-toggle"
-    [checked]="params.settings.checked"
-    [disabled]="params.settings.disabled">
-    {{params.value}}
-</md-slide-toggle>
+<div class="slide-toggle-container" [formGroup]="formGroup">
+    {{params.attr}}
+    {{params.settings.checked}}
+  <md-slide-toggle
+      class="slide-toggle"
+      formControlName="{{params.attr}}"
+      checked=false
+      [disabled]="params.settings.disabled">
+      {{params.alias}}
+  </md-slide-toggle>
+</div>

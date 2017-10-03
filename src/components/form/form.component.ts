@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject} from '@angular/core';
+import { Component, OnInit, Input, Inject, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InputChooserService } from "../../services/input-chooser.service";
 import { InputInterface } from "../../models/input.interface";
@@ -10,7 +10,7 @@ import { InputInterface } from "../../models/input.interface";
 })
 export class DyFormComponent implements OnInit {
   @Input() formData:InputInterface[];
-
+  @Output() output:EventEmitter<any> = new EventEmitter();
   public form:FormGroup;
 
   constructor(private inputGroup:InputChooserService) {
@@ -24,5 +24,10 @@ export class DyFormComponent implements OnInit {
 
   private getType(type:string):string {
     return type ? type : 'input';
+  }
+
+  onSubmit(e:any) {
+    console.log('eeeee', e);
+    this.output.emit(e);
   }
 }

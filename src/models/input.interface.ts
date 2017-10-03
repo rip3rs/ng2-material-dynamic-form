@@ -1,9 +1,9 @@
 export interface InputInterface {
   alias: string,
-  formGroupName:string,
+  attr:string,
   label: string,
-  value?: string,
-  required?: boolean,
-  order?: number,
+  value: string,
+  required: boolean,
+  order: number,
   controlType: string
 };

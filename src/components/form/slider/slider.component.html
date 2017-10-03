@@ -1,12 +1,14 @@
-<md-slider
-    class="slider"
-    [disabled]="params.settings.disabled"
-    [invert]="params.settings.invert"
-    [max]="params.settings.max"
-    [min]="params.settings.min"
-    [step]="params.settings.step"
-    [thumb-label]="params.settings.thumbLabel"
-    [tick-interval]="params.settings.tickInterval"
-    [vertical]="params.settings.vertical"
-    [value]="params.value">
-</md-slider>
+<div class="slider-container" [formGroup]="formGroup">
+  <md-slider
+      class="slider"
+      formControlName="{{params.attr}}"
+      [disabled]="params.settings.disabled"
+      [invert]="params.settings.invert"
+      [max]="params.settings.max"
+      [min]="params.settings.min"
+      [step]="params.settings.step"
+      [thumb-label]="params.settings.thumbLabel"
+      [tick-interval]="params.settings.tickInterval"
+      [vertical]="params.settings.vertical">
+  </md-slider>
+</div>

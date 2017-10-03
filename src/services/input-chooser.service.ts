@@ -11,7 +11,8 @@ export class InputChooserService {
     let group: any = {};
 
     inputsSettings.forEach(inputSetting => {
-      group[inputSetting.formGroupName] = inputSetting.required ?
+      console.log(inputSetting.attr)
+      group[inputSetting.attr] = inputSetting.required ?
         new FormControl(inputSetting.value || '', Validators.required) :
         new FormControl(inputSetting.value || '');
     });
