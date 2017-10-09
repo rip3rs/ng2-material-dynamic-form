@@ -5,15 +5,15 @@ import { InputInterface } from "../../models/input.interface";
 
 @Component({
   selector: 'ng2-material-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  templateUrl: 'form.component.html',
+  styleUrls: ['form.component.scss']
 })
 export class DyFormComponent implements OnInit {
   @Input() formData:InputInterface[];
   @Output() output:EventEmitter<any> = new EventEmitter();
-  public form:FormGroup;
+  form:FormGroup;
 
-  constructor(private inputGroup:InputChooserService) {
+  constructor(public inputGroup:InputChooserService) {
   }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class DyFormComponent implements OnInit {
 
   }
 
-  private getType(type:string):string {
+  getType(type:string):string {
     return type ? type : 'input';
   }
 

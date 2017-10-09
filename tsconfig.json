@@ -1,26 +1,34 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
     "target": "es5",
     "module": "es2015",
     "sourceMap": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": true,
     "stripInternal": true,
     "declaration": true,
-    "outDir": "./dist",
+    "strictNullChecks": true,
+    "inlineSources": true,
+    "skipLibCheck": true,
     "lib": ["es2015", "dom"]
   },
   "exclude": [
     "node_modules"
   ],
   "files": [
-    "index.ts",
-    "./src/form-material.module.ts"
+    "tmp/index.ts",
+    "tmp/src/form-material.module.ts"
   ],
   "angularCompilerOptions": {
-    "skipTemplateCodegen": true
+    "debug": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "skipMetadataEmit": false
   }
 }

@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  templateUrl: 'slider.component.html',
+  styleUrls: ['slider.component.scss']
 })
 export class DySliderComponent {
   @Input() params:InputInterface;

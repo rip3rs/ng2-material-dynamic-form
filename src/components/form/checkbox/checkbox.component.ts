@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-checkbox',
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  templateUrl: 'checkbox.component.html',
+  styleUrls: ['checkbox.component.scss']
 })
 export class DyCheckboxComponent {
   @Input() params:InputInterface;

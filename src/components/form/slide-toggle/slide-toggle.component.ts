@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-slide-toggle',
-  templateUrl: './slide-toggle.component.html',
-  styleUrls: ['./slide-toggle.component.scss']
+  templateUrl: 'slide-toggle.component.html',
+  styleUrls: ['slide-toggle.component.scss']
 })
 export class DySlideToggleComponent {
   @Input() params:InputInterface;

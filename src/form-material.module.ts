@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -28,13 +28,18 @@ import { DyDatePickerComponent } from './components/form/date-picker/date-picker
   ],
   imports: [
     CommonModule,
-    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialImportModule
   ],
   exports: [
-    DyFormComponent
+    DyFormComponent,
+    DyInputComponent,
+    DyCheckboxComponent,
+    DySliderComponent,
+    DySlideToggleComponent,
+    DySelectComponent,
+    DyRadioComponent
   ],
   providers: [
     InputChooserService

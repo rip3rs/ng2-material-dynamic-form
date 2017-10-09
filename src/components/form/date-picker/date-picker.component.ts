@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-date-picker',
-  templateUrl: './date-picker.component.html',
-  styleUrls: ['./date-picker.component.scss']
+  templateUrl: 'date-picker.component.html',
+  styleUrls: ['date-picker.component.scss']
 })
 export class DyDatePickerComponent {
   @Input() params:InputInterface;

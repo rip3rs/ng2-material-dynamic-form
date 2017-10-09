@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  templateUrl: 'input.component.html',
+  styleUrls: ['input.component.scss']
 })
 export class DyInputComponent {
   @Input() params:InputInterface;

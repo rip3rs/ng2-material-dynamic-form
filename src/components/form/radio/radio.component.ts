@@ -4,8 +4,8 @@ import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'dy-radio',
-  templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.scss']
+  templateUrl: 'radio.component.html',
+  styleUrls: ['radio.component.scss']
 })
 export class DyRadioComponent {
   @Input() params:InputInterface;

@@ -1,7 +1,7 @@
 <div class="select-container" [formGroup]="formGroup">
-  <md-select placeholder="{{params.alias}}" formControlName="{{params.attr}}">
-    <md-option *ngFor="let option of params.options" [value]="option.value">
+  <mat-select placeholder="{{params.alias}}" formControlName="{{params.attr}}">
+    <mat-option *ngFor="let option of params.options" [value]="option.value">
       {{option.key}}
-    </md-option>
-  </md-select>
+    </mat-option>
+  </mat-select>
 </div>
