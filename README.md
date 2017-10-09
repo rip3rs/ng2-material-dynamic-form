@@ -1,6 +1,10 @@
 # ng2-material-dynamic-form
 A simple dynamic form module using material design for angular 2
 
+**Version: 0.0.19**
+Build is working with angular ng serve.
+Not working with ng serve --prod
+
 **NOTE**
 This is still in very early stages. A lot might break.
 
