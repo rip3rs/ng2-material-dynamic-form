@@ -1,19 +1,64 @@
 # ng2-material-dynamic-form
 A simple dynamic form module using material design for angular 2
 
-**Version: 0.0.19**
-Build is working with angular ng serve.
-Not working with ng serve --prod
+**Version: 1.0.0**
+Everything should work out of the box.
 
-**NOTE**
-This is still in very early stages. A lot might break.
+## Instalation
 
-`<ng2-material-form [formData]="data" (output)="data($event)"></ng2-material-form>`
+`npm i --save ng2-material-dynamic-form`
 
-## formData
+### Adding SCSS dependency for material
+
+There are two ways of doing this:
+Add `node_modules/ng2-material-import/theme/default.scss` to the styles path in .angular-cli.json.
+
+```json
+...
+
+  "styles": [
+    "styles.css",
+    "../node_modules/ng2-material-import/theme/default.scss"
+  ],
+
+...
+```
+
+Or:
+
+Create a folder called themes. Inside that folder add a .SCSS file.
+inside that file add these lines:
+
+```scss
+@import '~@angular/material/theming';
+@include mat-core();
+$default-app-primary: mat-palette($mat-indigo);
+$default-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$default-app-warn:    mat-palette($mat-red);
+$default-app-theme: mat-light-theme($default-app-primary, $default-app-accent, $default-app-warn);
+@include angular-material-theme($default-app-theme);
+
+```
+
+After that add that file to the angular-cli styles section
+
+```json
+...
+
+  "styles": [
+    "styles.css",
+    "theme/default.scss"
+  ],
+
+...
+```
+
+## Usage
+
+`<ng2-material-form [formData]="formData" (output)="dataOutput($event)"></ng2-material-form>`
 
 ```typescript
-public data = [
+public formData = [
   //INPUT EXAMPLE
   { type: 'input', attr: 'inputTextExample', alias: 'Placholder', required: true },
 
@@ -45,7 +90,7 @@ public data = [
 ## Output
 
 ```typescript
-data(e) {
+dataOutput(e) {
   console.log(e);
 }
 ```

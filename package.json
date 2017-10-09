@@ -1,6 +1,6 @@
 {
   "name": "ng2-material-dynamic-form",
-  "version": "0.0.19",
+  "version": "1.0.0",
   "description": "Dynamic form module using material design for angular 2",
   "main": "./index.ts",
   "module": "./src/material-import.module.ts",
@@ -8,10 +8,6 @@
   "scripts": {
     "compile": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "$schema": "node_modules/ng-packagr/ng-package.schema.json",
-  "lib": {
-    "entryFile": "index.ts"
   },
   "repository": {
     "type": "git",
@@ -30,7 +26,7 @@
     "@angular/core": "^4.4.4",
     "@angular/forms": "^4.4.4",
     "@angular/http": "^4.4.4",
-    "ng2-material-import": "^1.1.8"
+    "ng2-material-import": "^1.1.10"
   },
   "devDependencies": {
     "@angular/compiler": "^4.4.4",
