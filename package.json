@@ -1,10 +1,10 @@
 {
   "name": "ng2-material-dynamic-form",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Dynamic form module using material design for angular 2",
-  "main": "./dist/index.ts",
-  "module": "./dist/material-import.module.ts",
-  "typings": "./dist/index.d.ts",
+  "main": "./dist/index",
+  "module": "./dist/material-import.module",
+  "typings": "./dist/index.d",
   "repository": {
     "type": "git",
     "url": "https://github.com/rip3rs/ng2-material-dynamic-form"
