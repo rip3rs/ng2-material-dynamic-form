@@ -27,7 +27,7 @@ export class DyFormComponent implements OnInit {
   }
 
   onSubmit(e:any) {
-    console.log('eeeee', e);
+    console.log(e);
     this.output.emit(e);
   }
 }
